@@ -15,23 +15,46 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
+class DigitalScreen {
+    constructor(id, name, content) {
+        this.id = id;
+        this.name = name;
+        this.content = content;
+    }
+}
+
+class StaticScreen {
+    constructor(id, name, content) {
+        this.id = id;
+        this.name = name;
+        this.content = content;
+    }
+}
+
+class ScreenGroup {
+    constructor(screens) {
+        this.screenIds = screens
+    }
+}
+
 app.get('/screens', (req, res) => {
-    const screens = [
-        {
-            id: 1,
-            name: 'Screen 1'
-        },
-        {
-            id: 2,
-            name: 'Screen 2'
-        },
-        {
-            id: 3,
-            name: 'Screen 3'
-        }
+    const digitalScreens = [
+        new DigitalScreen(1234, 'Big player', 'https://www.youtube.com/embed/dQw4w9WgXcQ'),
+        new DigitalScreen(2231, 'Buss stop #2131', 'https://www.youtube.com/embed/dQw4w9WgXcQ'),
+    ]
+    const staticScreens = [
+        new StaticScreen(2739, 'Big BillBoard', 'https://picsum.photos/id/1003/200/300'),
+        new StaticScreen(1510, 'Highway Billboard #9001', 'https://picsum.photos/id/1025/200/300')
+    ]
+    const groups = [
+        new ScreenGroup([digitalScreens[0].id, digitalScreens[1].id]),
+        new ScreenGroup([staticScreens[0].id, staticScreens[1].id])
     ]
     res.send({
-        screens
+        digitalScreens,
+        staticScreens,
+        groups
+
     })
 })
 
