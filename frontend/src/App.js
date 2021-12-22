@@ -3,7 +3,7 @@ import css from './App.css';
 function App() {
 const [screens, setScreens] = useState([]);
   useEffect(() => {
-      fetch("/screens")
+      fetch("http://localhost:8080/screens")
           .then(res => res.json())
           .then(
               (result) => {
