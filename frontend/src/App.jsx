@@ -46,8 +46,8 @@ const [digitalScreens, setDigitalScreens] = useState([]);
                    <h1>Screen groups</h1>
                    {groups ? groups.map((g, index) => (
                        <div className="Group">
-                           Id: {g.id}, name: {g.name}
-                           <li key={index}>
+                           <p className="groupTitle">Id: {g.id}, name: {g.name}</p>
+                           <li key={index} style={{listStyle: 'none'}}>
                                Screen ids in the group:
                                <ul>
                                    {g.screenIds.map((id => {

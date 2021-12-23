@@ -45,8 +45,8 @@ app.get('/screens', (req, res) => {
         new DigitalScreen(2231, 'Buss stop #2131', 'https://www.youtube.com/embed/dQw4w9WgXcQ'),
     ]
     const staticScreens = [
-        new StaticScreen(2739, 'Big BillBoard', 'https://picsum.photos/id/1003/200/300'),
-        new StaticScreen(1510, 'Highway Billboard #9001', 'https://picsum.photos/id/1025/200/300')
+        new StaticScreen(2739, 'Big BillBoard', 'https://picsum.photos/id/1003/300/300'),
+        new StaticScreen(1510, 'Highway Billboard #9001', 'https://picsum.photos/id/1025/300/300')
     ]
     const groups = [
         new ScreenGroup(9213, "Rue Digital screens",[digitalScreens[0].id, digitalScreens[1].id]),
