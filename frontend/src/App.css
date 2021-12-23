@@ -1,0 +1,35 @@
+.App html {
+    background-color: lightgray;
+}
+
+.App > div {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.App h1 {
+
+}
+
+#List {
+    display: flex;
+    flex-direction: column;
+}
+
+.Group {
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    background-color: beige;
+}
+
+.digital {
+    background-color: aqua;
+}
+
+.static {
+    background-color: purple;
+}

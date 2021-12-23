@@ -32,7 +32,9 @@ class StaticScreen {
 }
 
 class ScreenGroup {
-    constructor(screens) {
+    constructor(id, name,screens) {
+        this.id = id;
+        this.name = name;
         this.screenIds = screens
     }
 }
@@ -47,8 +49,8 @@ app.get('/screens', (req, res) => {
         new StaticScreen(1510, 'Highway Billboard #9001', 'https://picsum.photos/id/1025/200/300')
     ]
     const groups = [
-        new ScreenGroup([digitalScreens[0].id, digitalScreens[1].id]),
-        new ScreenGroup([staticScreens[0].id, staticScreens[1].id])
+        new ScreenGroup(9213, "Rue Digital screens",[digitalScreens[0].id, digitalScreens[1].id]),
+        new ScreenGroup(6753, "20 Highway",[staticScreens[0].id, staticScreens[1].id])
     ]
     res.send({
         digitalScreens,
