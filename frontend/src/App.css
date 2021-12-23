@@ -3,7 +3,7 @@
 }
 
 .App > div {
-    background-color: red;
+    /*background-color: red;*/
     display: flex;
     justify-content: space-between;
 }
@@ -24,12 +24,51 @@
 
 .group {
     background-color: beige;
+    border: 2px solid black;
+    margin-left: 2px;
 }
 
 .digital {
-    background-color: aqua;
+    background-color: #00a8ff;
+    border: 2px solid black;
+    margin-left: 2px;
+    flex: 1;
 }
 
 .static {
-    background-color: purple;
+    background-color: #03b592;
+    border: 2px solid black;
+    margin-left: 2px;
+    flex: 1;
+
+}
+
+.staticScreen {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: 400px;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 3px;
+    box-shadow: 2px 2px 15px 2px #000000;
+}
+.staticScreen img {
+    width: 200px;
+    height: 300px;
+}
+
+.staticScreenTitle {
+    border-bottom: 3px solid white;
+    background-color: gray;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+.staticScreenFooter {
+    border-top: 3px solid white;
+    background-color: lightslategray;
+    color: white;
+    width: 100%;
+    text-align: center;
 }

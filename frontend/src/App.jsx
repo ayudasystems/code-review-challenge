@@ -28,7 +28,7 @@ const [digitalScreens, setDigitalScreens] = useState([]);
                    <h1>Static screens</h1>
                    {staticScreens ? staticScreens.map((s, index) => (
                        <div>
-                           <li key={index}>
+                           <li key={index} style={{listStyle: 'none'}}>
                                <StaticScreen {...s} />
                            </li>
                        </div>
@@ -37,7 +37,7 @@ const [digitalScreens, setDigitalScreens] = useState([]);
                <ul id="List" className="digital">
                    <h1>Digital screens</h1>
                    {digitalScreens ? digitalScreens.map((s, index) => (
-                       <li key={index}>
+                       <li key={index} style={{listStyle: 'none'}}>
                            <DigitalScreen {...s} />
                        </li>
                    )) : 'loading'}
