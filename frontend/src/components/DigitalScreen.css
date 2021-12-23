@@ -1,4 +1,30 @@
 .screen {
     display: flex;
     flex-direction: column;
+    border: 1px solid gray;
+    width: 400px;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 3px;
+    box-shadow: 2px 2px 15px 2px #000000;
+}
+
+.screen iframe {
+    width: 98%;
+    height: 300px;
+}
+
+.screenTitle {
+    border-bottom: 3px solid white;
+    background-color: gray;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+.screenFooter {
+    border-top: 3px solid white;
+    background-color: lightslategray;
+    color: white;
+    width: 100%;
+    text-align: center;
 }

@@ -2,11 +2,18 @@ import React from 'react';
 import './DigitalScreen.css'
 
 function DigitalScreen(props) {
-    const { name, content } = props;
+    const { name, content, id } = props;
     return (
         <div className="screen">
-            <p>{name}</p>
-            <iframe src={content} width={500} height={500}/>
+            <div className="screenTitle">
+                <p>{id}</p>
+                <p>{name}</p>
+            </div>
+            <iframe src={content}/>
+            <div className="staticScreenFooter">
+                <p>Edit</p>
+                <p>Book</p>
+            </div>
         </div>
     );
 }
